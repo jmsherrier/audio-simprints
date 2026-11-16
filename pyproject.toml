@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio-simprints"
+version = "0.1.0"
+description = "Granular audio codes: Chromaprint windows as 128-bit codes, matched within a Hamming tolerance and confirmed by a time vote"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Joseph Sherrier", email = "jmsherrier@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = ["numpy==2.5.2"]
+
+[project.optional-dependencies]
+test = ["pytest==9.2.0"]
+
+[project.scripts]
+audio-simprints = "audio_simprints.testmode:main"

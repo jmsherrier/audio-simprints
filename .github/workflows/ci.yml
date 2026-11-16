@@ -1,0 +1,45 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]  # Linux x86-64, macOS Apple Silicon, Windows x86-64
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install ffmpeg (system, not bundled)
+        shell: bash
+        run: |
+          case "$RUNNER_OS" in
+            Linux) sudo apt-get update && sudo apt-get install -y ffmpeg ;;
+            macOS) brew install ffmpeg ;;
+            Windows) choco install ffmpeg -y --no-progress ;;
+          esac
+      - name: Install fpcalc 1.6.2 (Chromaprint's official build, system, not bundled)
+        shell: bash
+        run: |
+          case "$RUNNER_OS" in
+            Linux) A=linux-x86_64.tar.gz; H=c968ad4a0821592a79b158fb2e1f46cbe0a22a0a1dbc0743c67d68e75d15d2bb ;;
+            macOS) A=macos-arm64.tar.gz; H=f3bc56cb42d89a01237bb3f3629329e4ec75f7c1b0217acf6e9bf952ac47979b ;;
+            Windows) A=windows-x86_64.zip; H=b74369726676670af3ab0eadff45f960cf969fdf4a87a971ba37eaf8d530e874 ;;
+          esac
+          curl -sSfL -o "fpcalc-$A" "https://github.com/acoustid/chromaprint/releases/download/v1.6.2/chromaprint-fpcalc-1.6.2-$A"
+          python -c "import hashlib,sys; d=hashlib.sha256(open(sys.argv[1],'rb').read()).hexdigest(); sys.exit(d != sys.argv[2] and f'SHA-256 {d}')" "fpcalc-$A" "$H"
+          mkdir -p "$RUNNER_TEMP/fpcalc"
+          case "$A" in *.zip) unzip -j -q "fpcalc-$A" -d "$RUNNER_TEMP/fpcalc" ;; *) tar xzf "fpcalc-$A" --strip-components=1 -C "$RUNNER_TEMP/fpcalc" ;; esac
+          echo "$RUNNER_TEMP/fpcalc" >> "$GITHUB_PATH"
+      - run: ffmpeg -version
+      - run: fpcalc -version
+      - name: fpcalc raw output on the test vectors (compare across platforms)
+        shell: bash
+        run: |
+          for f in tests/vectors/*.wav; do
+            echo "$f: $(fpcalc -raw -plain -length 0 -algorithm 2 "$f" | python -c "import hashlib,sys; print(hashlib.sha256(sys.stdin.read().strip().encode()).hexdigest())")"
+          done
+      - run: pip install -e ".[test]"
+      - run: pytest -v -s
