@@ -62,7 +62,7 @@ def main():
         pcm = read(HERE / f"{name}.wav")
         raw = audio.fingerprint(pcm)
         (HERE / f"{name}.raw").write_text(",".join(map(str, raw.tolist())) + "\n")
-        expected[name] = {role: recipe.from_fingerprint(raw, pcm, role) for role in ("creator", "verifier")}
+        expected[name] = {role: recipe.from_samples(pcm, role, raw=raw) for role in ("creator", "verifier")}
     expected["fpcalc"] = audio.versions()["fpcalc"]
     (HERE / "expected.json").write_text(json.dumps(expected, indent=1) + "\n")
 

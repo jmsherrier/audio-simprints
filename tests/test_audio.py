@@ -30,7 +30,7 @@ def test_quarters():
 @pytest.mark.parametrize("role", ["creator", "verifier"])
 def test_codes_from_raw_fingerprint(name, role):
     """Pure numpy from the committed raw fingerprint: exact on every platform."""
-    assert recipe.from_fingerprint(raw_of(name), read(HERE / f"{name}.wav"), role) == EXPECTED[name][role]
+    assert recipe.from_samples(read(HERE / f"{name}.wav"), role, raw=raw_of(name)) == EXPECTED[name][role]
 
 
 def test_silent_and_constant_windows_are_skipped():
@@ -48,7 +48,7 @@ def test_fpcalc_reproduces_vector(name):
     assert len(raw) == len(ref)
     print(f"\n{name}: {audio.versions()['fpcalc']}: raw identical={bool((raw == ref).all())}, "
           f"bit error rate={np.bitwise_count(raw ^ ref).sum() / (32 * len(ref)):.6f}")  # fmt: skip
-    assert max(bits_apart(recipe.from_fingerprint(raw, pcm, "creator"), EXPECTED[name]["creator"])) <= 8
+    assert max(bits_apart(recipe.from_samples(pcm, "creator", raw=raw), EXPECTED[name]["creator"])) <= 8
 
 
 @pytest.mark.skipif(not FPCALC, reason="fpcalc not on PATH")
@@ -56,11 +56,13 @@ def test_misaligned_excerpt_is_found():
     pcm = read(HERE / "music.wav")
     start = 3.77  # not on the creator's 5 s grid
     clip = pcm[round(start * audio.RATE) : round((start + 24) * audio.RATE)]
-    v = recipe.from_fingerprint(audio.fingerprint(clip), clip, "verifier")
+    v = recipe.from_samples(clip, "verifier")
     r = match(v, EXPECTED["music"]["creator"])
     assert r["relationship"] == "contained_in"
     assert abs(r["offset"] - start) < 0.2 and abs(r["slope"] - 1) < 0.02
     assert match(v, EXPECTED["other"]["creator"])["relationship"] == "none"
+    hits = recipe.verify(v, recipe.index({n: EXPECTED[n]["creator"] for n in ("music", "other")}))
+    assert [h["declaration"] for h in hits] == ["music"] and hits[0] == {"declaration": "music"} | r
 
 
 @pytest.mark.skipif(not (FPCALC and FFMPEG), reason="ffmpeg or fpcalc not on PATH")

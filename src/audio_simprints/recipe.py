@@ -62,7 +62,14 @@ def verifier_starts(n: int, s: dict) -> np.ndarray:
     return np.arange(0, n - bounds(s["window"])[4] + 1, max(1, round(s["step"] / FP_HOP)), dtype=np.int64)
 
 
-def codes_of(raw: np.ndarray, pcm: np.ndarray, starts: np.ndarray, window: float) -> tuple[np.ndarray, np.ndarray]:
+def block_energy(pcm: np.ndarray) -> np.ndarray:
+    """Sum of squares of each whole block of FP_STEP samples: block i starts where
+    sub-fingerprint i does."""
+    n = len(pcm) // FP_STEP
+    return (np.asarray(pcm[: n * FP_STEP], np.int64).reshape(n, FP_STEP) ** 2).sum(1)
+
+
+def codes_of(raw: np.ndarray, energy: np.ndarray, starts: np.ndarray, window: float) -> tuple[np.ndarray, np.ndarray]:
     """Per window start (in sub-fingerprints): the code as four uint32, one per quarter,
     each the bitwise majority of the quarter's sub-fingerprints (a tie gives 0); and why
     the window gets no code: "" (it does), "silent" or "constant"."""
@@ -74,23 +81,23 @@ def codes_of(raw: np.ndarray, pcm: np.ndarray, starts: np.ndarray, window: float
     codes = (major.astype(np.uint64) << np.arange(32, dtype=np.uint64)).sum(2).astype(np.uint32)
     flips = np.r_[0, np.cumsum(np.bitwise_count(raw[1:] ^ raw[:-1]), dtype=np.int64)]
     change = (flips[starts + b[4] - 1] - flips[starts]) / (b[4] - 1)
-    sq = np.r_[0, np.cumsum(np.asarray(pcm, np.int64) ** 2)]
-    s0 = np.minimum(starts * FP_STEP, len(pcm) - 1)
-    s1 = np.minimum(s0 + round(window * RATE), len(pcm))
-    db = 10 * np.log10((sq[s1] - sq[s0]) / np.maximum(s1 - s0, 1) / 32768**2 + 1e-12)
+    sq = np.r_[0, np.cumsum(energy, dtype=np.int64)]
+    s0 = np.minimum(starts, len(energy))
+    s1 = np.minimum(starts + b[4], len(energy))  # the window's blocks: as many as its sub-fingerprints
+    db = 10 * np.log10((sq[s1] - sq[s0]) / np.maximum(s1 - s0, 1) / FP_STEP / 32768**2 + 1e-12)
     why = np.where(db < SILENT, "silent", np.where(change < CONSTANT, "constant", ""))
     return codes, why
 
 
-def from_fingerprint(raw: np.ndarray, pcm: np.ndarray, role: str, settings: dict | None = None) -> dict:
-    """generate() from a raw fingerprint and the samples it came from."""
+def from_fingerprint(raw: np.ndarray, energy: np.ndarray, duration: float, role: str, settings: dict | None = None) -> dict:
+    """generate() from a raw fingerprint, the block energies and duration of its samples."""
     if role not in ("creator", "verifier"):
         raise ValueError(f"role must be 'creator' or 'verifier', not {role!r}")
     s = DEFAULTS | (settings or {})
     starts = (creator_starts if role == "creator" else verifier_starts)(len(raw), s)
-    codes, why = codes_of(raw, pcm, starts, s["window"]) if len(starts) else (np.zeros((0, 4), np.uint32), np.array([]))
+    codes, why = codes_of(raw, energy, starts, s["window"]) if len(starts) else (np.zeros((0, 4), np.uint32), np.array([]))
     keep = why == ""
-    out = {"recipe_version": version_string(s), "role": role, "duration": round(len(pcm) / RATE, 3),
+    out = {"recipe_version": version_string(s), "role": role, "duration": round(duration, 3),
            "hop": round(s["hop"] if role == "creator" else max(1, round(s["step"] / FP_HOP)) * FP_HOP, 4),
            "codes": [{"start": round(int(i) * FP_HOP, 3), "code": "".join(f"{int(v):08x}" for v in c)}
                      for i, c in zip(starts[keep], codes[keep])],
@@ -102,8 +109,13 @@ def from_fingerprint(raw: np.ndarray, pcm: np.ndarray, role: str, settings: dict
 def generate(path, role: str = "creator", settings: dict | None = None) -> dict:
     """The codes of an audio file: creator (one window every `hop` seconds, to store with
     the declaration) or verifier (every `step`, for a clip being checked)."""
-    pcm = audio.decode(path)
-    return from_fingerprint(audio.fingerprint(pcm), pcm, role, settings)
+    return from_samples(audio.decode(path), role, settings)
+
+
+def from_samples(pcm: np.ndarray, role: str, settings: dict | None = None, raw: np.ndarray | None = None) -> dict:
+    """generate() from decoded samples (and their raw fingerprint, if already made)."""
+    raw = audio.fingerprint(pcm) if raw is None else raw
+    return from_fingerprint(raw, block_energy(pcm), len(pcm) / RATE, role, settings)
 
 
 # --- matching --------------------------------------------------------------------------
@@ -156,19 +168,59 @@ def match(verifier: dict, creator: dict, settings: dict | None = None) -> dict:
     on one time line, the matched range in each, the offset and speed of the line, and
     the relationship."""
     s = MATCH | (settings or {})
-    window = window_of(verifier["recipe_version"])
-    if window != window_of(creator["recipe_version"]):
-        raise ValueError("cannot match codes of different window lengths")
+    check_windows(verifier, [creator])
     vq, vt = parse(verifier)
     cq, ct = parse(creator)
     qi, rj, dist = near(vq, cq, s["tolerance"])
-    # A hit off by k sub-fingerprints differs by about 5k bits, so a tolerance wider than
-    # the verifier's own misalignment (half its step) lets edge hits tilt the line.
-    line = time_vote(vt[qi], ct[rj], rj, s["tolerance"] + 1 - dist, verifier["hop"] / 2 + FP_HOP)
+    return decide(verifier, creator, vt[qi], ct[rj], rj, dist, s)
+
+
+def check_windows(verifier: dict, creators) -> float:
+    w = window_of(verifier["recipe_version"])
+    if any(window_of(c["recipe_version"]) != w for c in creators):
+        raise ValueError("cannot match codes of different window lengths")
+    return w
+
+
+def index(declarations: dict) -> dict:
+    """An in-memory index of {id: creator result}, for verify()."""
+    ids = list(declarations)
+    parsed = [parse(declarations[d]) for d in ids]
+    return {"declarations": declarations, "ids": ids,
+            "codes": np.concatenate([c for c, _ in parsed]) if ids else np.zeros((0, 2), np.uint64),
+            "starts": np.concatenate([t for _, t in parsed]) if ids else np.zeros(0),
+            "owner": np.repeat(np.arange(len(ids)), [len(t) for _, t in parsed])}  # fmt: skip
+
+
+def verify(clip, idx: dict, settings: dict | None = None) -> list:
+    """A clip (a path, or a verifier result) against an index: one match() result, plus
+    "declaration", per recording it matches, most windows first."""
+    s = MATCH | (settings or {})
+    v = clip if isinstance(clip, dict) else generate(clip, "verifier", settings)
+    check_windows(v, idx["declarations"].values())
+    vq, vt = parse(v)
+    qi, rj, dist = near(vq, idx["codes"], s["tolerance"])
+    out = []
+    for o in np.unique(idx["owner"][rj]):
+        k = idx["owner"][rj] == o
+        d = idx["ids"][o]
+        r = decide(v, idx["declarations"][d], vt[qi[k]], idx["starts"][rj[k]], rj[k], dist[k], s)
+        if r["relationship"] != "none":
+            out.append({"declaration": d} | r)
+    return sorted(out, key=lambda r: -r["windows"])
+
+
+def decide(verifier: dict, creator: dict, c: np.ndarray, t: np.ndarray, g: np.ndarray, dist: np.ndarray, s: dict) -> dict:
+    """The time vote and result over one recording's hits: clip times c, original times
+    t, original windows g and distances."""
+    window = window_of(creator["recipe_version"])
+    # A hit off by k sub-fingerprints differs by a few bits per step, so a tolerance wider
+    # than the verifier's own misalignment (half its step) lets edge hits tilt the line.
+    line = time_vote(c, t, g, s["tolerance"] + 1 - dist, verifier["hop"] / 2 + FP_HOP)
     if line is None or line[2] < s["min_windows"]:
         return {"relationship": "none", "windows": line[2] if line else 0}
     a, b, n, inl = line
-    c, t, g, d = vt[qi][inl], ct[rj][inl], rj[inl], dist[inl]
+    c, t, g, d = c[inl], t[inl], g[inl], dist[inl]
     c0, c1, o0, o1 = c.min(), c.max() + window, t.min(), t.max() + window
     # Refit on each original window's closest hits (their mean clip time), weighted so
     # that windows matched only off alignment (at the clip's ends) barely count.
