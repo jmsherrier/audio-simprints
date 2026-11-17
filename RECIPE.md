@@ -43,7 +43,7 @@ quarter values in order, each as 8 lowercase hex digits (most significant first)
 **Skipped windows.** A window gets no code if:
 
 - *silent*: the RMS of its samples (`s × 1365` to `s × 1365 + window × 11025`) is
-  below −50 dBFS; or
+  below −60 dBFS; or
 - *constant*: its sub-fingerprints change, on average, by fewer than 1.0 bits from
   one to the next (a steady tone, a hum, digital silence after Chromaprint's
   filters).

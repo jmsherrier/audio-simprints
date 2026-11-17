@@ -22,7 +22,7 @@ MATCH = {  # starting values; fitted on the tuning split in Phase 3
     "tolerance": 20,  # bits (of 128) two codes may differ by
     "min_windows": 3,  # distinct original windows that must lie on one time line (M)
 }
-SILENT = -50.0  # dBFS: a window quieter than this (RMS) gets no code
+SILENT = -60.0  # dBFS: a window quieter than this (RMS) gets no code (-50 skipped -6 dB copies of quiet classical recordings)
 CONSTANT = 1.0  # bits: a window whose sub-fingerprints change by fewer bits per step than this, on average, gets no code
 SLOPES = np.round(np.arange(0.9, 1.1001, 0.005), 3)  # time vote: slopes tried (1 +/- 10%; video-simprints steps 0.02)
 CONTEXT = 3.0  # seconds at the end of a recording no window can start in (Chromaprint's frame and filters, about 2.7 s)

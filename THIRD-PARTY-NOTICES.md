@@ -42,6 +42,26 @@ and checks its SHA-256. Reports record the version used.
 The test vectors in [`tests/vectors`](tests/vectors) are synthetic, made by
 [`tests/make_vectors.py`](tests/make_vectors.py), and are Apache-2.0 like the code.
 
+## Test corpus
+
+The recordings are not in this repository and are not redistributed.
+[`tests/corpus/manifest.csv`](tests/corpus/manifest.csv) lists each one with its URL,
+licence, credit and SHA-256; `fetch-corpus` downloads them. Only CC0, public-domain and
+CC BY files were chosen (no CC BY-SA, NC or ND).
+
+- **Wikimedia Commons music**: Musopen recordings (public domain or CC0, a few CC BY)
+  and other performances of the same pieces from Commons' per-work categories. Each
+  row credits the file page and the performer as Commons gives them.
+- **LibriVox** audiobooks on archive.org, public domain, read by LibriVox
+  volunteers. Each row names the archive.org item.
+- **archive.org netlabels** releases under CC BY 2.0, 2.5, 3.0 or 4.0, one track per
+  artist. The licence is read from each item's own metadata. Each row credits the
+  artist (as the item names it), the file and the archive.org item.
+- **NASA, JPL and White House** series (*This Week @NASA*, *Space to Ground*, JPL's
+  *What's Up*, *A Moment with…*, *West Wing Week*) on Wikimedia Commons, public domain
+  (works of the US government). These are the same rows as in video-simprints'
+  corpus.
+
 ## Patents
 
 Not reviewed. Audio fingerprinting has a dense patent history, including landmark

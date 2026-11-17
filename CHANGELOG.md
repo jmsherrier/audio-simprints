@@ -14,3 +14,14 @@
   platform) and fpcalc checks within a few bits.
 - CI on Linux, macOS and Windows, with ffmpeg and the official fpcalc build
   (SHA-256 checked).
+- `index()` and `verify()` over many recordings, as in video-simprints.
+- Silence threshold −60 dBFS (was −50, which skipped quiet classical recordings
+  turned down 6 dB).
+- Test mode: `audio-simprints fetch-corpus` and `audio-simprints test --split
+  tuning|test`, with 27 manipulations tied to their true time ranges, false matches
+  against unrelated recordings, look-alikes and series episodes, storage, and time.
+  The corpus manifest (250 files: Wikimedia Commons, LibriVox, archive.org
+  netlabels, NASA/JPL/White House series) and the baseline reports for both splits.
+  ccMixter was planned but its file server refuses scripts; FMA needs an account.
+- fpcalc's "Not enough audio data" now counts as too short (no codes), like
+  "Empty fingerprint".

@@ -36,7 +36,7 @@ def fingerprint(pcm: np.ndarray) -> np.ndarray:
     one per 1365 samples. Audio shorter than about 3 s has none."""
     p = subprocess.run([tool("fpcalc"), *FPCALC], input=np.asarray(pcm, "<i2").tobytes(), capture_output=True)
     out = p.stdout.strip()
-    if p.returncode == 2 and b"Empty fingerprint" in p.stderr:
+    if p.returncode and (b"Empty fingerprint" in p.stderr or b"Not enough audio data" in p.stderr):  # too short
         return np.zeros(0, np.uint32)
     if p.returncode:
         raise AudioError(f"fpcalc failed: {p.stderr.decode(errors='replace')[-500:]}")
