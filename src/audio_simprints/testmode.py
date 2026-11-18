@@ -102,7 +102,15 @@ def main(argv=None):
     t.add_argument("--split", default="tuning", choices=["tuning", "test"])
     t.add_argument("--out", type=Path)
     t.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2) - 1))
+    u = sub.add_parser("tune", help="fit the settings on the tuning split, write a report")
+    u.add_argument("--split", default="tuning", choices=["tuning"])
+    u.add_argument("--out", type=Path)
+    u.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2) - 1))
     a = ap.parse_args(argv)
+    if a.cmd == "tune":
+        from .tune import tune
+
+        return tune(a.split, a.out or MANIFEST.parent / f"tune-{a.split}", a.workers)
     if a.cmd == "fetch-corpus":
         return fetch()
     if a.cmd == "test":

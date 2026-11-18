@@ -34,7 +34,7 @@ def test_codes_from_raw_fingerprint(name, role):
 
 
 def test_silent_and_constant_windows_are_skipped():
-    assert EXPECTED["music"]["creator"]["skipped"] == {"silent": 1, "constant": 2}
+    assert EXPECTED["music"]["creator"]["skipped"] == {"silent": 3, "constant": 5}
     assert EXPECTED["other"]["creator"]["skipped"] == {"silent": 0, "constant": 0}
 
 
@@ -74,6 +74,6 @@ def test_generate_whole_file_is_identical():
 
 
 def test_window_lengths_must_agree():
-    v = EXPECTED["music"]["verifier"] | {"recipe_version": recipe.RECIPE + ";window=5"}
+    v = EXPECTED["music"]["verifier"] | {"recipe_version": recipe.RECIPE + ";window=10"}
     with pytest.raises(ValueError):
         match(v, EXPECTED["music"]["creator"])

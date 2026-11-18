@@ -8,7 +8,7 @@
 [![Status: proof of concept](https://img.shields.io/badge/status-proof%20of%20concept-orange)](#status)
 
 Granular audio codes ("audio facets"). A recording gets one 128-bit code for every
-10 seconds of sound, a new one every 5 seconds. A clip found online is coded at a
+5 seconds of sound, a new one every 2.5 seconds. A clip found online is coded at a
 fine step and its codes are compared with the stored ones. Matching codes must line
 up in time. The answer says which recording the clip comes from, which part of it,
 and at what offset and speed: "contained in, 47.3–77.3 s, speed 1.00".
@@ -18,9 +18,10 @@ The third member of a family with
 [video-simprints](https://github.com/jmsherrier/video-simprints), with the same
 `generate` / `match` shape and the same result fields.
 
-<a id="status"></a>**Status:** proof of concept, recipe `audio-simprints/0.1`.
-Treat codes as test data. The thresholds are starting values, not yet fitted.
-[Results](#results-baseline-test-split) are on a partial corpus.
+<a id="status"></a>**Status:** proof of concept, recipe `audio-simprints/0.2`.
+Treat codes as test data. The settings are fitted on the tuning split, which has no
+electronic music; on the test split's netlabel music they give false matches (see
+[Results](#results-test-split)). The corpus is partial.
 
 ## Design credit
 
@@ -28,7 +29,8 @@ The design is Sebastian Posth's (Liccium): Chromaprint's raw stream of 32-bit
 sub-fingerprints, windows of 10 s every 5 s on the creator side, each window cut
 into four quarters whose bitwise majorities make one 128-bit code; a verifier that
 slides its windows at a fine step so misaligned excerpts still line up; and the
-time vote of video-simprints to confirm a match.
+time vote of video-simprints to confirm a match. Recipe 0.2 keeps the design with
+shorter windows (5 s every 2.5 s), chosen on the tuning split.
 
 ## Install
 
@@ -74,12 +76,13 @@ prints
  {
   "declaration": "music.json",
   "relationship": "contained_in",
-  "windows": 3,
-  "clip": [0.99, 21.27],
-  "original": [5.08, 25.1],
-  "offset": 3.76,
-  "slope": 0.9998,
-  "overlap_fraction": {"verifier": 0.8449, "candidate": 0.2707}
+  "windows": 7,
+  "clip": [1.24, 21.22],
+  "original": [5.08, 25.06],
+  "offset": 3.71,
+  "slope": 1.0073,
+  "density": 1.0,
+  "overlap_fraction": {"verifier": 0.8325, "candidate": 0.27}
  }
 ]
 ```
@@ -98,79 +101,105 @@ skipped).
   `none`. These are about time; audio has no picture to crop.
 - `windows`: distinct stored windows on the time line (M counts these).
 - `clip` and `original`: the matched range in each, in seconds. They are slightly
-  shorter than the real overlap, because stored windows start only every 5 s.
+  shorter than the real overlap, because stored windows start only every 2.5 s.
 - `offset` and `slope`: the line `original = slope × clip + offset`. `offset` is
   where the clip starts in the recording; `slope` is the fitted speed.
+- `density`: the matched windows as a share of the stored windows that start in
+  the matched original range.
 - `overlap_fraction`: `{verifier, candidate}`, the share of each that the matched
   range covers.
+- `segments` (with the `segments` setting above 1): every line found in the
+  recording, for re-edits.
 
-Settings and defaults: creator `window=10`, `hop=5`; verifier `step=0.124` (one
-sub-fingerprint; `0.5` costs a quarter of the windows); match `tolerance=20` bits
-of 128 and `min_windows=3` (M). [RECIPE.md](RECIPE.md) specifies every step.
+`index(declarations, shared)` and `verify(clip, idx)` check a clip against many
+recordings. `shared` holds known shared material (intros, jingles); a match to it
+comes back with `"label": "shared_branding"`, and declarations' windows that match
+it are left out as stop codes. `speed_passes(pcm, speeds)` makes extra verifier
+results from the clip rescaled by each speed; `verify` takes the list.
 
-## Results (baseline, test split)
+Settings and defaults, fitted on the tuning split
+([`tune-tuning/summary.md`](tests/corpus/tune-tuning/summary.md)): creator
+`window=5`, `hop=2.5`; verifier `step=0.124` (one sub-fingerprint; `0.5` costs a
+quarter of the windows and match time); match `tolerance=28` bits of 128,
+`min_windows=3` (M), `min_density=0.25`, `max_speed=0.05` (slopes tried),
+`segments=1`, `stop_owners=0`. [RECIPE.md](RECIPE.md) specifies every step.
+
+## Results (test split)
 
 From [`tests/corpus/report-test/summary.md`](tests/corpus/report-test/summary.md),
-printed by `audio-simprints test --split test`. The settings are the starting values
-above; nothing has been fitted yet (that is Phase 3, on the tuning split, whose
-report is [`report-tuning`](tests/corpus/report-tuning/summary.md)).
+printed by `audio-simprints test --split test`. The settings were chosen by
+`audio-simprints tune` on the tuning split
+([`tune-tuning/summary.md`](tests/corpus/tune-tuning/summary.md)); the test split
+was not used to choose anything. The Phase 2 baseline (recipe 0.1: 10 s windows,
+tolerance 20) is in the same file at commit `6633188`.
 
-The corpus is incomplete. upload.wikimedia.org throttled this machine for hours, so
-52 Commons recordings of the test split (its 12 orchestral and chamber originals
+The corpus is incomplete. upload.wikimedia.org has throttled this machine since 16 November,
+so 52 Commons recordings of the test split (its 12 orchestral and chamber originals
 and 40 unrelated recordings) are not in this run; the report lists them. What ran:
 30 originals (4 classical piano, 10 LibriVox chapters, 10 netlabel tracks, 6 NASA
-and JPL episodes), 60 unrelated recordings, 20 look-alikes and 12 other episodes
-of a series, 20.93 h. Each original gets every manipulation twice, at random places
-(60 queries per row). Found means the right recording, with a fitted offset within
-2 s of the truth.
+and JPL episodes), 60 unrelated recordings, 20 look-alikes and 12 episodes of a
+series (3 of them the series' reference), 20.93 h. Each original gets every
+manipulation twice, at random places (60 queries per row). Found means the right
+recording, with a fitted offset within 2 s of the truth.
 
-| manipulation (30 s unless named) | found, step 0.124 s | found, step 0.5 s | median offset error (s) |
-| --- | --- | --- | --- |
-| excerpt 5 s | 0% (0/60) | 0% (0/60) | – |
-| excerpt 10 s | 0% (0/60) | 0% (0/60) | – |
-| excerpt 30 s | 100% (60/60) | 100% (60/60) | 0.04 |
-| excerpt 60 s | 100% (60/60) | 100% (60/60) | 0.03 |
-| MP3 128k | 98% (59/60) | 98% (59/60) | 0.07 |
-| MP3 64k | 100% (60/60) | 100% (60/60) | 0.04 |
-| AAC 128k | 98% (59/60) | 98% (59/60) | 0.04 |
-| Opus 32k | 98% (59/60) | 98% (59/60) | 0.04 |
-| resample via 22.05 kHz | 100% (60/60) | 100% (60/60) | 0.04 |
-| mono | 98% (59/60) | 98% (59/60) | 0.04 |
-| volume +6 dB | 100% (60/60) | 100% (60/60) | 0.04 |
-| volume −6 dB | 100% (60/60) | 100% (60/60) | 0.05 |
-| phone band (300–3400 Hz, 8 kHz) | 30% (18/60) | 22% (13/60) | 0.15 |
-| noise, SNR 20 dB | 98% (59/60) | 98% (59/60) | 0.05 |
-| noise, SNR 10 dB | 98% (59/60) | 97% (58/60) | 0.04 |
-| speed +2% (pitch moves) | 10% (6/60) | 8.3% (5/60) | 0.11 |
-| speed −2% | 10% (6/60) | 6.7% (4/60) | 0.24 |
-| speed ±5% | 0% (0/60 each) | 0% (0/60 each) | – |
-| tempo +5% (pitch kept) | 97% (58/60) | 97% (58/60) | 0.26 |
-| tempo −5% | 93% (56/60) | 88% (53/60) | 0.30 |
-| under speech or music, −6 or −12 dB | 0% (0/60 each) | 0% (0/60 each) | – |
-| re-edit (3 × 20 s, reordered) | 92% (55/60) | 88% (53/60) | 0.08 |
-| soundtrack of an H.264/AAC video | 100% (60/60) | 98% (59/60) | 0.04 |
+| manipulation (30 s unless named) | found | found, step 0.5 s | found, 4 speed passes | baseline 0.1 | median bits at the true place |
+| --- | --- | --- | --- | --- | --- |
+| excerpt 5 s | 0% (0/60) | 0% (0/60) | 0% (0/60) | 0% | – |
+| excerpt 10 s | 0% (0/60) | 0% (0/60) | 0% (0/60) | 0% | 4 |
+| excerpt 30 s | 100% (60/60) | 100% (60/60) | 100% (60/60) | 100% | 5 |
+| excerpt 60 s | 100% (60/60) | 100% (60/60) | 100% (60/60) | 100% | 6 |
+| MP3 128k | 98% (59/60) | 98% (59/60) | 98% (59/60) | 98% | 5 |
+| MP3 64k | 100% (60/60) | 100% (60/60) | 100% (60/60) | 100% | 5 |
+| AAC 128k | 98% (59/60) | 98% (59/60) | 98% (59/60) | 98% | 5 |
+| Opus 32k | 98% (59/60) | 98% (59/60) | 98% (59/60) | 98% | 6 |
+| resample via 22.05 kHz | 100% (60/60) | 100% (60/60) | 100% (60/60) | 100% | 5 |
+| mono | 98% (59/60) | 98% (59/60) | 98% (59/60) | 98% | 4 |
+| volume +6 dB | 100% (60/60) | 100% (60/60) | 100% (60/60) | 100% | 5 |
+| volume −6 dB | 100% (60/60) | 100% (60/60) | 100% (60/60) | 100% | 5 |
+| phone band (300–3400 Hz, 8 kHz) | 72% (43/60) | 68% (41/60) | 72% (43/60) | 30% | 23 |
+| noise, SNR 20 dB | 100% (60/60) | 100% (60/60) | 100% (60/60) | 98% | 5 |
+| noise, SNR 10 dB | 100% (60/60) | 100% (60/60) | 98% (59/60) | 98% | 5 |
+| speed +2% (pitch moves) | 83% (50/60) | 77% (46/60) | 100% (60/60) | 10% | 26 |
+| speed −2% | 78% (47/60) | 77% (46/60) | 100% (60/60) | 10% | 26 |
+| speed +5% | 0% (0/60) | 0% (0/60) | 87% (52/60) | 0% | 42 |
+| speed −5% | 5.0% (3/60) | 5.0% (3/60) | 82% (49/60) | 0% | 42 |
+| tempo +5% (pitch kept) | 100% (60/60) | 100% (60/60) | 100% (60/60) | 97% | 14 |
+| tempo −5% | 100% (60/60) | 100% (60/60) | 100% (60/60) | 93% | 15 |
+| under speech, −6 dB | 1.7% (1/60) | 1.7% (1/60) | 1.7% (1/60) | 0% | 46 |
+| under speech, −12 dB | 0% (0/60) | 0% (0/60) | 0% (0/60) | 0% | 52 |
+| under music, −6 dB | 1.7% (1/60) | 1.7% (1/60) | 1.7% (1/60) | 0% | 51 |
+| under music, −12 dB | 0% (0/60) | 0% (0/60) | 0% (0/60) | 0% | 59 |
+| re-edit (3 × 20 s, reordered) | 98% (59/60) | 98% (59/60) | 98% (59/60) | 92% | 5 |
+| soundtrack of an H.264/AAC video | 100% (60/60) | 100% (60/60) | 100% (60/60) | 100% | 5 |
 
-Found clips gave the right relationship in 96–100% of cases (`contained_in`;
-`overlapping` for re-edits). The matched range covers a median 83% of a 30 s
-clip's stretch of the original: stored windows start only every 5 s.
+Bits: the median Hamming distance (of 128) between a stored window and the clip's
+window at its true place; the tolerance is 28, and 64 is chance. Found clips gave
+the right relationship (`contained_in`; `overlapping` for re-edits) in 74–100% of
+cases, lowest for speed changes (and in none of the 3 found at speed −5%). With the `segments` option, 50 of 60 re-edits had
+all three parts found and 10 had two.
 
-**False matches** (step 0.124 s; at 0.5 s: 4 unrelated pairs, the same look-alike):
+**False matches** (two 30 s excerpts per recording; pairs are whole recordings
+against originals):
 
-| | queries (two 30 s excerpts each) | pairs (whole recording × original) |
-| --- | --- | --- |
-| unrelated recordings | 0% (0/120) | 0.3% (5/1800) |
-| look-alikes (other performances or readings) | 0% (0/40) | 5.0% (1/20) |
-| other episodes of a series (shared intro) | 0% (0/24) | 0% (0/24) |
+| run | unrelated: excerpts | unrelated: pairs | originals: pairs with another original | look-alike: pairs | series: excerpts matching their series | false matches, all queries |
+| --- | --- | --- | --- | --- | --- | --- |
+| fitted | 4.2% (5/120) | 0.7% (13/1800) | 0.2% (2/870) | 20% (4/20) | 0% (0/18) | 38 |
+| step 0.5 s | 2.5% (3/120) | 0.4% (7/1800) | 0.2% (2/870) | 10% (2/20) | 0% (0/18) | 22 |
+| 4 speed passes | 8.3% (10/120) | 1.0% (18/1800) | 0.3% (3/870) | 30% (6/20) | 0% (0/18) | 71 |
 
-No query matched a wrong recording. The 5 unrelated pairs are netlabel tracks
-against netlabel originals, with 3–5 windows scattered over minutes; the look-alike
-is two performances of the Moonlight Sonata meeting on 4 windows.
+On the tuning split the same settings gave no false match at all. On the test split,
+nearly all false matches involve three netlabel originals (electronic tracks) that
+match each other and other netlabel music on 3–14 windows. The tuning split has no
+electronic music, so the settings never saw it. The look-alikes that match are other
+recordings of the Moonlight Sonata, The Entertainer and Für Elise. Shared series
+intros never matched, with or without stop codes, so stop codes changed nothing here.
 
-**Cost.** 11.72 codes per minute of audio: 188 bytes per minute as raw 128-bit
-codes, 764 as JSON. One process makes creator codes at 0.067 s per minute of
-audio and verifier codes at 0.158 s per 30 s clip, decode and fpcalc included.
-Matching against the 30 originals takes a median 9.4 ms per query at step
-0.124 s and 2.2 ms at 0.5 s.
+**Cost.** 23.56 codes per minute of audio: 377 bytes per minute as raw 128-bit
+codes, 1518 as JSON (0.1: 188 and 764). One process makes creator codes at 0.06 s
+per minute of audio and verifier codes at 0.238 s per 30 s clip, decode and fpcalc
+included. Matching against the 30 originals takes a median 50.6 ms per query at
+step 0.124 s, 13.9 ms at 0.5 s and 253.5 ms with 4 speed passes (each pass is also
+another fpcalc run).
 
 ## Test mode
 
@@ -189,18 +218,18 @@ was throttling.
 
 ## Limits
 
-- Excerpts of 10 s or less are not found. A clip cut at a random point almost
-  never holds a whole 10 s stored window, and the baseline needs whole windows.
-- Speed changes that move the pitch are not found (10% at ±2%, none at ±5%).
-  Chromaprint's chroma features move with the pitch. Tempo changes that keep the
-  pitch are found.
+- False matches on electronic music (above). The settings must be re-fitted on a
+  tuning split that has it before they mean anything for such catalogues.
+- Excerpts of 10 s or less are not found. A 10 s clip holds only two whole 5 s
+  windows and M is 3, although its codes are close (4 bits). 5 s clips hold none.
+- Speed changes of 5% that move the pitch are found only with speed passes, which
+  cost about 5× the verifier time and add false matches.
 - A recording mixed under speech or music, even 6 dB down, is not found: the
-  foreground decides the codes.
-- Phone-band audio is found about a third of the time.
-- False matches are few (0.3% of unrelated pairs) but they are not zero. They are
-  scattered hits that the slope search lined up.
-- The test corpus is missing its orchestral and chamber music (see above), and has
-  only 30 originals.
+  foreground decides the codes (46–59 bits apart).
+- Phone-band audio is found about three times in four.
+- Storage is twice that of 0.1, because windows are half as long.
+- The test corpus is missing its orchestral and chamber music, and has only 30
+  originals.
 
 ## Patents: not reviewed
 
