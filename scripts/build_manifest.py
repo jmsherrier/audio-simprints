@@ -9,7 +9,8 @@ Sources, all CC0, public domain or CC BY (CC BY-SA, NC and ND are left out):
   Musopen's Kickstarter project and its main category (orchestral, chamber).
 - LibriVox (archive.org), public domain: first chapters of different books, split by
   book; and several readings of one chapter (look-alikes).
-- archive.org's netlabels collection, CC BY releases, one track per artist: test only.
+- archive.org's netlabels collection, CC BY releases, one track per artist: test, and
+  (added with --add-netlabels tuning, other artists) tuning.
 - ccMixter: not used. Its API lists files, but its file server answers 403 to scripts.
 - NASA, JPL and White House series from video-simprints' corpus (Wikimedia Commons,
   public domain): other episodes share the series' intro music ("series").
@@ -73,7 +74,7 @@ SERIES = {  # set: (split, originals, other episodes), names in video-simprints'
 COUNTS = {  # (originals, unrelated) per split and source
     ("tuning", "commons"): (8, 22), ("test", "commons"): (12, 40),
     ("tuning", "librivox"): (6, 15), ("test", "librivox"): (8, 30),
-    ("test", "netlabels"): (10, 30),
+    ("test", "netlabels"): (10, 30), ("tuning", "netlabels"): (6, 20),
 }  # fmt: skip
 
 
@@ -149,9 +150,10 @@ def librivox_items(n: int) -> list[str]:
     return [d["identifier"] for d in get("https://archive.org/advancedsearch.php", q)["response"]["docs"]]
 
 
-def netlabel_tracks(n: int, rng: random.Random) -> list[dict]:
+def netlabel_tracks(n: int, rng: random.Random, exclude=frozenset()) -> list[dict]:
     """n tracks from archive.org's netlabels collection, CC BY 2.0-4.0, one per artist
-    (compilations left out): the first original MP3 of 3-12 MB of each release."""
+    (compilations left out, and artists or items in exclude, lower case): the first
+    original MP3 of 3-12 MB of each release."""
     lics = " OR ".join(f'"http://creativecommons.org/licenses/by/{v}/"' for v in ("2.0", "2.5", "3.0", "4.0"))
     q = {"q": f"collection:netlabels AND mediatype:audio AND licenseurl:({lics})", "fl[]": "identifier,creator",
          "sort[]": "downloads desc", "rows": 500, "output": "json"}  # fmt: skip
@@ -162,7 +164,7 @@ def netlabel_tracks(n: int, rng: random.Random) -> list[dict]:
     for d in docs:
         if len(out) == n:
             break
-        if d["creator"].lower() in artists:
+        if d["creator"].lower() in artists or d["creator"].lower() in exclude or d["identifier"].lower() in exclude:
             continue
         meta = get(f"https://archive.org/metadata/{d['identifier']}")
         lic = re.search(r"creativecommons\.org/licenses/by/(\d\.\d)/$", meta.get("metadata", {}).get("licenseurl", ""))
@@ -187,7 +189,11 @@ def main():
     ap.add_argument("--video-manifest", type=Path, required=True)
     ap.add_argument("--skip-missing-commons", action="store_true",
                     help="do not wait for upload.wikimedia.org (it throttles per IP for hours): leave the SHA-256 and duration of Commons files not yet downloaded blank; fetch-corpus fills them in later")
+    ap.add_argument("--add-netlabels", metavar="SPLIT", help="only add this split's netlabel rows (COUNTS) to the existing manifest, "
+                    "leaving out every artist and item already in it; nothing else is reselected")
     a = ap.parse_args()
+    if a.add_netlabels:
+        return add_netlabels(a.add_netlabels)
     rng = random.Random("audio-simprints corpus")
     rows = []
 
@@ -266,6 +272,40 @@ def main():
         w.writerows(rows)
     print(f"{len(rows)} rows ({sum(r['duration'] == '' for r in rows)} not downloaded), "
           f"{sum(r['duration'] or 0 for r in rows) / 3600:.1f} h -> {MANIFEST}")
+
+
+def add_netlabels(split: str):
+    """Append a split's netlabel rows to tests/corpus/manifest.csv (download, SHA-256,
+    duration), with artists and items not already in the manifest."""
+    with open(MANIFEST, newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        cols, old = reader.fieldnames, list(reader)
+    if any(r["split"] == split and r["source"] == "archive-netlabels" for r in old):
+        raise SystemExit(f"{split} already has netlabel rows")
+    exclude = set()
+    for r in old:
+        if r["source"] == "archive-netlabels":
+            m = re.match(r"archive.org netlabels: .* by (.+), from .* \(item (.+)\)$", r["credit"])
+            exclude |= {m.group(1).lower(), m.group(2).lower()}
+    n_orig, n_unrel = COUNTS[(split, "netlabels")]
+    names = {r["name"] for r in old}
+    new = []
+    for i, t in enumerate(netlabel_tracks(n_orig + n_unrel, random.Random(f"audio-simprints {split} netlabels"), frozenset(exclude))):
+        t |= {"split": split, "role": "original" if i < n_orig else "unrelated", "set": "netlabels"}
+        while t["name"] in names:
+            t["name"] += "-2"
+        names.add(t["name"])
+        path = CACHE / "corpus" / (t["name"] + Path(urllib.parse.urlparse(t["url"]).path).suffix.lower())
+        if not path.exists():
+            print("fetching", t["name"], flush=True)
+        t["sha256"] = download(t["url"], path) if not path.exists() else hashlib.sha256(path.read_bytes()).hexdigest()
+        t["duration"] = seconds(path)
+        new.append(t)
+    with open(MANIFEST, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, cols, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(old + new)
+    print(f"added {len(new)} {split} netlabel rows ({sum(t['duration'] for t in new) / 3600:.1f} h) -> {MANIFEST}")
 
 
 if __name__ == "__main__":

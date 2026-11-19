@@ -19,9 +19,9 @@ DEFAULTS = {
     "step": FP_HOP,  # verifier: seconds between window starts (one sub-fingerprint)
 }
 MATCH = {  # fitted on the tuning split: tests/corpus/tune-tuning/summary.md
-    "tolerance": 28,  # bits (of 128) two codes may differ by (0.1: 20)
-    "min_windows": 3,  # distinct original windows that must lie on one time line (M)
-    "min_density": 0.25,  # share of the original's windows inside the matched range that are on the line
+    "tolerance": 32,  # bits (of 128) two codes may differ by (0.1: 20)
+    "min_windows": 6,  # distinct original windows that must lie on one time line (M; 0.1: 3)
+    "min_density": 0.75,  # share of the original's windows inside the matched range that are on the line
     "max_speed": 0.05,  # slopes tried: 1 +/- this (0.1: 0.1)
     "segments": 1,  # >1: also report further lines (re-edits), up to this many per recording
     "stop_owners": 0,  # >0: a stored window near codes of this many other recordings is a stop window

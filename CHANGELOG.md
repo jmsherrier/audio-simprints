@@ -5,8 +5,8 @@
 ### Recipe 0.2 (Phase 3)
 
 - Settings fitted on the tuning split (`audio-simprints tune`): windows of 5 s
-  every 2.5 s (were 10 s every 5 s), tolerance 28 bits (was 20), M 3, a new
-  density check (`min_density` 0.25: matched windows as a share of the stored
+  every 2.5 s (were 10 s every 5 s), tolerance 32 bits (was 20), M 6 (was 3), a new
+  density check (`min_density` 0.75: matched windows as a share of the stored
   windows in the matched range) and slopes 1 ± 0.05 (were ± 0.1). Codes of 0.1 and
   0.2 do not mix.
 - The time vote bins offsets per slope instead of trying a line through every hit;
@@ -18,9 +18,14 @@
   segments, and reports the Hamming distance at each clip's true place. Whole
   originals are also queried against the other originals, and one episode per
   series is kept as the series' reference.
-- Test split: phone band 30% → 72%, speed ±2% 10% → 78–83%, re-edits 92% → 98%;
-  but 38 false matches (0.7% of unrelated pairs, was 0.3%), on netlabel electronic
-  music, which the tuning split lacks.
+- The tuning split gains 6 netlabel originals and 20 unrelated netlabel tracks
+  (`build_manifest.py --add-netlabels tuning`, artists not in the test split). A
+  first fit without them (tolerance 28, M 3, density 0.25) gave 38 false matches
+  on the test split's netlabel music.
+- `tune` caches each grid point and follow-up run under `.cache/tune/`.
+- Test split, against 0.1: phone band 30% → 70%, speed ±2% 10% → 77–78%, re-edits
+  92% → 87%. Unrelated recordings: 3 of 120 excerpts and 4 of 1800 whole-recording
+  pairs matched (0.1: 0 and 5), all among netlabel tracks.
 
 ### Recipe 0.1 (Phases 1 and 2)
 

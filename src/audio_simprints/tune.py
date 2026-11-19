@@ -19,9 +19,9 @@ from .evaluate import MANIPULATIONS, REEDIT, creators_of, false_counts, pct, pre
 
 SHAPES = [(10, 5), (10, 2.5), (8, 4), (6, 3), (5, 2.5)]  # (window, hop) seconds
 STEPS = [round(recipe.FP_HOP, 4), 0.5]
-TOLERANCES = [12, 16, 20, 24, 28, 32]
-MS = [1, 2, 3, 4, 5, 6]
-DENSITIES = [0.0, 0.25, 0.5, 0.75]
+TOLERANCES = [12, 16, 20, 24, 28, 32, 36, 40]
+MS = [1, 2, 3, 4, 5, 6, 7, 8, 10]
+DENSITIES = [0.0, 0.25, 0.5, 0.75, 0.9, 1.0]
 SPEED_SETS = [(), (0.98, 1.02), (0.96, 0.98, 1.02, 1.04), (0.95, 0.96, 0.97, 0.98, 0.99, 1.01, 1.02, 1.03, 1.04, 1.05)]
 MAX_SPEEDS = [0.02, 0.05, 0.1]
 STOPS = [0, 2, 3]
@@ -49,10 +49,19 @@ def _cached_grid(cfg: tuple) -> dict:
 
 
 def _experiment(job: tuple) -> tuple:
+    """One run with the chosen settings, cached under .cache/tune like the grid points."""
     kind, x, settings, shared, speeds = job
+    plan = hashlib.sha1(json.dumps([q["id"] for q in _ctx["queries"]] + _ctx["originals"]).encode()).hexdigest()[:8]
+    key = hashlib.sha1(json.dumps([kind, x, settings, shared, list(speeds)], sort_keys=True).encode()).hexdigest()[:10]
+    path = CACHE / "tune" / f"{_ctx['split']}-{plan}-exp-{key}.json"
+    if path.exists():
+        return kind, x, json.loads(path.read_text())
     r = run(_ctx, settings, shared=shared, speeds=speeds)
+    r |= {"false": false_counts(_ctx, r["queries"])}
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(r))
     print(f"  {kind} {x}: done", flush=True)
-    return kind, x, r | {"false": false_counts(_ctx, r["queries"])}
+    return kind, x, r
 
 
 def compact(queries: list) -> list:

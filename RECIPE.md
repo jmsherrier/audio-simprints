@@ -51,7 +51,7 @@ quarter values in order, each as 8 lowercase hex digits (most significant first)
 ## 3. Matching
 
 1. **Hits.** Every pair of a verifier code and a creator code within `tolerance`
-   bits (default 28). Its quality is `tolerance + 1 − distance`. Stop windows (below) are not in
+   bits (default 32). Its quality is `tolerance + 1 − distance`. Stop windows (below) are not in
    the index and give no hits.
 2. **Time vote.** Lines `t = a·c + b`, with `c` the verifier start and `t` the
    creator start, for slopes `a` from `1 − max_speed` to `1 + max_speed` in steps of
@@ -62,7 +62,7 @@ quarter values in order, each as 8 lowercase hex digits (most significant first)
    ties go to the slope nearer 1. The line's offset is then the median offset of its
    hits, and its hits are those within `tol` of it.
 3. **Decision.** A match needs at least `min_windows` (M) distinct creator windows
-   (default 3) on the line, and a density of at least `min_density` (default 0.25): those windows as a share of
+   (default 6) on the line, and a density of at least `min_density` (default 0.75): those windows as a share of
    the creator windows that start inside the matched original range.
 4. **Fit.** For each creator window on the line, take its lowest-distance hits and
    their mean clip time. Fit `t = slope · c + offset` to these by least squares,
