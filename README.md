@@ -208,12 +208,14 @@ another fpcalc run).
 ```sh
 audio-simprints fetch-corpus           # downloads the files in tests/corpus/manifest.csv
 audio-simprints test --split tuning    # or test; writes tests/corpus/report-<split>/
+audio-simprints tune                   # fits the settings on the tuning split
+audio-simprints stems                  # Phase 4, needs pip install ".[stems]"; writes report-stems/
 ```
 
 The corpus is not in the repository. The manifest lists each file with its URL,
 licence, credit and SHA-256: CC0, public domain or CC BY only, from Wikimedia
-Commons, LibriVox, archive.org's netlabels collection, and the NASA, JPL and White
-House series of video-simprints' corpus. Tuning and test use different sources,
+Commons, LibriVox, archive.org's netlabels collection and stems, and the NASA, JPL
+and White House series of video-simprints' corpus. Tuning and test use different sources,
 pieces and readers. [`scripts/build_manifest.py`](scripts/build_manifest.py) chose
 the files. `fetch-corpus` also fills in rows the builder left blank when Commons
 was throttling.

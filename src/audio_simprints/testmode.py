@@ -106,7 +106,12 @@ def main(argv=None):
     u.add_argument("--split", default="tuning", choices=["tuning"])
     u.add_argument("--out", type=Path)
     u.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2) - 1))
+    sub.add_parser("stems", help="Phase 4 stems test (needs the stems extra), write a report")
     a = ap.parse_args(argv)
+    if a.cmd == "stems":
+        from .stems import run
+
+        return run(MANIFEST.parent / "report-stems")
     if a.cmd == "tune":
         from .tune import tune
 

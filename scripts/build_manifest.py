@@ -11,6 +11,8 @@ Sources, all CC0, public domain or CC BY (CC BY-SA, NC and ND are left out):
   book; and several readings of one chapter (look-alikes).
 - archive.org's netlabels collection, CC BY releases, one track per artist: test, and
   (added with --add-netlabels tuning, other artists) tuning.
+- archive.org items with a full mix and its stems (mix.mp3 and drums, bass and keys
+  stems), CC BY: the "stems" split (added with --add-stems), for Phase 4.
 - ccMixter: not used. Its API lists files, but its file server answers 403 to scripts.
 - NASA, JPL and White House series from video-simprints' corpus (Wikimedia Commons,
   public domain): other episodes share the series' intro music ("series").
@@ -191,7 +193,11 @@ def main():
                     help="do not wait for upload.wikimedia.org (it throttles per IP for hours): leave the SHA-256 and duration of Commons files not yet downloaded blank; fetch-corpus fills them in later")
     ap.add_argument("--add-netlabels", metavar="SPLIT", help="only add this split's netlabel rows (COUNTS) to the existing manifest, "
                     "leaving out every artist and item already in it; nothing else is reselected")
+    ap.add_argument("--add-stems", type=int, metavar="N", help="only add a stems split of N songs (full mix and drums, bass and "
+                    "keys stems) to the existing manifest")
     a = ap.parse_args()
+    if a.add_stems:
+        return add_stems(a.add_stems)
     if a.add_netlabels:
         return add_netlabels(a.add_netlabels)
     rng = random.Random("audio-simprints corpus")
@@ -306,6 +312,60 @@ def add_netlabels(split: str):
         w.writeheader()
         w.writerows(old + new)
     print(f"added {len(new)} {split} netlabel rows ({sum(t['duration'] for t in new) / 3600:.1f} h) -> {MANIFEST}")
+
+
+STEM_KINDS = {"drums": r"drum", "bass": r"bass", "keys": r"keys"}
+
+
+def stem_songs(n: int, rng: random.Random) -> list[list[dict]]:
+    """n archive.org items, CC BY, with mix.mp3 and drums, bass and keys stems (for each
+    kind the shortest file name that has it): [mix row, stem rows] per song."""
+    lics = " OR ".join(f'"http://creativecommons.org/licenses/by/{v}/"' for v in ("2.0", "2.5", "3.0", "4.0"))
+    q = {"q": f"mediatype:audio AND (title:(stems OR stem OR multitrack OR multitracks) OR subject:(stems OR stem OR multitrack "
+              f"OR multitracks)) AND licenseurl:({lics})", "fl[]": "identifier,item_size", "sort[]": "identifier asc", "rows": 500, "output": "json"}  # fmt: skip
+    docs = [d for d in get("https://archive.org/advancedsearch.php", q)["response"]["docs"] if (d.get("item_size") or 0) < 6e8]
+    rng.shuffle(docs)
+    out = []
+    for d in docs:
+        if len(out) == n:
+            break
+        meta = get(f"https://archive.org/metadata/{d['identifier']}")
+        lic = re.search(r"creativecommons\.org/licenses/by/(\d\.\d)/$", meta.get("metadata", {}).get("licenseurl", ""))
+        names = sorted(f["name"] for f in meta.get("files", []) if f.get("source") == "original" and f["name"].lower().endswith(".mp3"))
+        kinds = {k: min((f for f in names if re.search(rx, f, re.I) and f != "mix.mp3"), key=len, default=None) for k, rx in STEM_KINDS.items()}
+        if not lic or "mix.mp3" not in names or None in kinds.values():
+            continue
+        title = text(str(meta["metadata"].get("title", d["identifier"])))
+        song = slug(f"stems-{title}")
+        def row(f, name, role):
+            return {"name": name, "split": "stems", "role": role, "set": song, "source": "archive-stems", "licence": f"CC BY {lic.group(1)}",
+                    "url": f"https://archive.org/download/{d['identifier']}/{urllib.parse.quote(f)}",
+                    "credit": f"archive.org: {f} of {title} (item {d['identifier']})"}  # fmt: skip
+        out.append([row("mix.mp3", song, "original")] + [row(f, f"{song}--{k}", "stem") for k, f in kinds.items()])
+        time.sleep(0.5)
+    return out
+
+
+def add_stems(n: int):
+    """Append a stems split of n songs to tests/corpus/manifest.csv (download, SHA-256,
+    duration)."""
+    with open(MANIFEST, newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        cols, old = reader.fieldnames, list(reader)
+    if any(r["split"] == "stems" for r in old):
+        raise SystemExit("the manifest already has a stems split")
+    new = [t for song in stem_songs(n, random.Random("audio-simprints stems")) for t in song]
+    for t in new:
+        path = CACHE / "corpus" / (t["name"] + ".mp3")
+        if not path.exists():
+            print("fetching", t["name"], flush=True)
+        t["sha256"] = download(t["url"], path) if not path.exists() else hashlib.sha256(path.read_bytes()).hexdigest()
+        t["duration"] = seconds(path)
+    with open(MANIFEST, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, cols, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(old + new)
+    print(f"added {len(new)} stems rows, {len(new) // 4} songs ({sum(t['duration'] for t in new) / 3600:.1f} h) -> {MANIFEST}")
 
 
 if __name__ == "__main__":

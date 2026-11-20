@@ -15,6 +15,7 @@ dependencies = ["numpy==2.5.2"]
 
 [project.optional-dependencies]
 test = ["pytest==9.2.0"]
+stems = ["demucs==4.1.0", "torch==2.5.1"]  # Phase 4 stems test only; see THIRD-PARTY-NOTICES.md for the weights
 
 [project.scripts]
 audio-simprints = "audio_simprints.testmode:main"
