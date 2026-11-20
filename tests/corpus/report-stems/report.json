@@ -1,0 +1,8357 @@
+{
+ "recipe": "audio-simprints/0.2",
+ "model": "htdemucs",
+ "match": {
+  "tolerance": 32,
+  "min_windows": 6,
+  "min_density": 0.75,
+  "max_speed": 0.05,
+  "segments": 1,
+  "stop_owners": 0
+ },
+ "songs": 20,
+ "song_minutes": 105.3,
+ "queries": [
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-14-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     9,
+     0.9
+    ],
+    [
+     "stems-yet-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     7,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-a-thousand-songs-away-ft-mr-yesterday-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-yet-stems",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems",
+     9,
+     0.9
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-14-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-yet-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-14-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-death-crash-kills-49-ft-freqman-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-yet-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-death-crash-kills-49-ft-freqman-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-yet-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-an-open-medicine-cabinet-is-an-open-bar__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|other",
+     9,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|other",
+     9,
+     1.0
+    ]
+   ],
+   "B_sources": []
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-19-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-ant-s-smoke-and-mirrors-free-120bpm__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-busfahrt-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-busfahrt-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-busfahrt-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-busfahrt-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-goblin-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     9,
+     0.9
+    ],
+    [
+     "stems-yet-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ]
+   ],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-busfahrt-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     9,
+     0.9
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     6,
+     0.857
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ]
+   ],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": true,
+   "A_false": [
+    [
+     "stems-goblin-stems",
+     6,
+     0.75
+    ],
+    [
+     "stems-trance-14-stems",
+     6,
+     0.75
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-twilight-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-yet-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-goblin-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-twilight-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-yet-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": true,
+   "A_false": [
+    [
+     "stems-goblin-stems",
+     6,
+     1.0
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-goblin-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-goblin-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-day-of-the-headless-dead-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-death-of-ase-grieg-drum-bass-mix-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-13-stems|drums",
+     9,
+     0.9
+    ],
+    [
+     "stems-twilight-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     6,
+     0.75
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-twilight-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-yet-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-crash-kills-49-ft-freqman-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-death-of-ase-grieg-drum-bass-mix-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-19-stems|vocals",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-19-stems|vocals",
+     6,
+     0.857
+    ]
+   ],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-13-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     0.875
+    ],
+    [
+     "stems-yet-stems|drums",
+     7,
+     0.875
+    ],
+    [
+     "stems-goblin-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     6,
+     0.75
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-alpha-omega-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-y-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-goblin-stems",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems",
+     10,
+     1.0
+    ],
+    [
+     "stems-twilight-stems",
+     9,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems",
+     9,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems",
+     7,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems",
+     6,
+     0.857
+    ],
+    [
+     "stems-yet-stems",
+     6,
+     1.0
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-y-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-goblin-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     7,
+     0.875
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-fdt-y-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-goblin-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     7,
+     0.875
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-fdt-y-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-trance-13-stems",
+     6,
+     0.75
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-y-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     9,
+     0.9
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     8,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-fdt-y-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-fdt-y-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": true,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-y-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-fdt-y-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-y-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-y-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-y-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-y-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-y-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-fdt-y-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-y-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-fdt-y-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-trance-13-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-fdt-y-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-trance-13-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-goblin-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-trance-13-stems",
+     7,
+     1.0
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-goblin-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-13-stems|drums",
+     7,
+     0.875
+    ],
+    [
+     "stems-yet-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     7,
+     0.875
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     6,
+     0.857
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     6,
+     0.75
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-goblin-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     6,
+     0.857
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-goblin-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-yet-stems",
+     7,
+     1.0
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-goblin-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-yet-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     9,
+     0.9
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     9,
+     0.9
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     8,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-goblin-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-13-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-yet-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-goblin-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-goblin-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-goblin-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-goblin-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-goblin-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-goblin-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-goblin-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-goblin-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-goblin-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-goblin-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-goblin-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-goblin-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-y-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-19-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-19-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     6,
+     0.857
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-twilight-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-mixthe-trial-metamorphosis-in-the-penal-colony-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     7,
+     0.875
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-goblin-stems",
+     8,
+     1.0
+    ],
+    [
+     "stems-twilight-stems",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems",
+     8,
+     1.0
+    ],
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar",
+     7,
+     1.0
+    ],
+    [
+     "stems-yet-stems",
+     7,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems",
+     7,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems",
+     6,
+     0.857
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-13-stems|drums",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-trance-14-stems",
+     9,
+     1.0
+    ],
+    [
+     "stems-goblin-stems",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems",
+     8,
+     1.0
+    ],
+    [
+     "stems-yet-stems",
+     6,
+     1.0
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-yet-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     7,
+     0.875
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-yet-stems|drums",
+     8,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": true,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-rescue-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-rescue-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-rescue-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-rescue-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-rescue-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-rescue-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-day-of-the-headless-dead-stems",
+     7,
+     1.0
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-when-fish-attack-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-death-crash-kills-49-ft-freqman-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [
+    [
+     "stems-day-of-the-headless-dead-stems",
+     9,
+     1.0
+    ],
+    [
+     "stems-twilight-stems",
+     7,
+     0.875
+    ],
+    [
+     "stems-goblin-stems",
+     6,
+     0.75
+    ]
+   ],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     6,
+     0.75
+    ],
+    [
+     "stems-trance-19-stems|vocals",
+     6,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-19-stems|vocals",
+     6,
+     1.0
+    ]
+   ],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     8,
+     0.889
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ]
+   ],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-the-headless-dead-are-back-in-town-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     9,
+     0.9
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ]
+   ],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-trance-13-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-goblin-stems",
+     9,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems",
+     9,
+     1.0
+    ],
+    [
+     "stems-twilight-stems",
+     6,
+     1.0
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-13-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-goblin-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     7,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-trance-13-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     8,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-trance-13-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-goblin-stems",
+     9,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems",
+     7,
+     1.0
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-13-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-y-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-trance-13-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-14-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-yet-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass",
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-trance-13-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-13-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-13-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-13-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-13-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-trance-13-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-trance-13-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-13-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-13-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-13-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-13-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-trance-13-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-trance-14-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-14-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|other",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|other",
+     7,
+     0.778
+    ]
+   ],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-14-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|other",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|other",
+     6,
+     0.857
+    ]
+   ],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-14-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems",
+     7,
+     0.875
+    ],
+    [
+     "stems-yet-stems",
+     7,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems",
+     6,
+     1.0
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-14-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-yet-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-trance-14-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-death-crash-kills-49-ft-freqman-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     6,
+     0.857
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-14-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-14-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-trance-14-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-trance-14-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-14-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-trance-13-stems|bass",
+     6,
+     0.75
+    ]
+   ],
+   "C": true,
+   "C_false": [
+    [
+     "stems-trance-13-stems|bass",
+     6,
+     0.75
+    ]
+   ],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-trance-14-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-13-stems|bass",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-13-stems|bass",
+     6,
+     0.75
+    ]
+   ],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-14-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-14-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ]
+   ],
+   "B_sources": [
+    "drums",
+    "other"
+   ]
+  },
+  {
+   "id": "stems-trance-14-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [
+    [
+     "stems-day-of-the-headless-dead-stems",
+     8,
+     1.0
+    ]
+   ],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-19-stems|vocals",
+     8,
+     1.0
+    ]
+   ],
+   "B_sources": [
+    "drums",
+    "other"
+   ]
+  },
+  {
+   "id": "stems-trance-14-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-14-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-trance-14-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-trance-19-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": true,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [
+    [
+     "stems-trance-13-stems",
+     6,
+     0.857
+    ]
+   ],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-trance-19-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-trance-13-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-trance-19-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-trance-19-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-trance-19-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-trance-19-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-twilight-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-twilight-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-twilight-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-twilight-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": true,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-twilight-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-when-fish-attack-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-twilight-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-13-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-twilight-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-twilight-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-twilight-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-twilight-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-twilight-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-trance-19-stems|vocals",
+     7,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-19-stems|vocals",
+     7,
+     1.0
+    ]
+   ],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-twilight-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     7,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-twilight-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-twilight-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [
+    [
+     "stems-trance-14-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|bass",
+     6,
+     0.75
+    ]
+   ],
+   "C": true,
+   "C_false": [
+    [
+     "stems-trance-13-stems|bass",
+     6,
+     0.75
+    ]
+   ],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-twilight-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-13-stems|bass",
+     8,
+     0.889
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-13-stems|bass",
+     8,
+     0.889
+    ]
+   ],
+   "B_sources": []
+  },
+  {
+   "id": "stems-twilight-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-twilight-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-twilight-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": true,
+   "C_false": [],
+   "B_sources": [
+    "other"
+   ]
+  },
+  {
+   "id": "stems-when-fish-attack-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": true,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-when-fish-attack-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": true,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-when-fish-attack-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": true,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [
+    [
+     "stems-fdt-y-stems",
+     6,
+     1.0
+    ]
+   ],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-when-fish-attack-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "bass"
+   ]
+  },
+  {
+   "id": "stems-when-fish-attack-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-when-fish-attack-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-y-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__drums__0__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems",
+     8,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems",
+     6,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems",
+     6,
+     0.75
+    ]
+   ],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__drums__0__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-14-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-yet-stems__drums__0__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-14-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     7,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-yet-stems__drums__1__alone",
+   "kind": "drums",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__drums__1__mix 0 dB",
+   "kind": "drums",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-yet-stems__drums__1__mix −6 dB",
+   "kind": "drums",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [
+    [
+     "stems-when-fish-attack-stems",
+     6,
+     1.0
+    ]
+   ],
+   "B": false,
+   "B_false": [
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__bass__0__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__bass__0__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-yet-stems__bass__0__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-goblin-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": [
+    "drums"
+   ]
+  },
+  {
+   "id": "stems-yet-stems__bass__1__alone",
+   "kind": "bass",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__bass__1__mix 0 dB",
+   "kind": "bass",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__bass__1__mix −6 dB",
+   "kind": "bass",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__keys__0__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__keys__0__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__keys__0__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__keys__1__alone",
+   "kind": "keys",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": null,
+   "B_false": [],
+   "C": null,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__keys__1__mix 0 dB",
+   "kind": "keys",
+   "level": "mix 0 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-death-crash-kills-49-ft-freqman-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "stems-yet-stems__keys__1__mix −6 dB",
+   "kind": "keys",
+   "level": "mix −6 dB",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-death-crash-kills-49-ft-freqman-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     6,
+     0.75
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "chump-change-01-chump-change-footage-feat-deserved__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "chump-change-01-chump-change-footage-feat-deserved__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "dewback-01gnabber96__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "dewback-01gnabber96__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "kansas-beach-patrol-01-breakfast__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "kansas-beach-patrol-01-breakfast__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "lingua-lustra-brhnet45-03-lingua-lustra-slow-time__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "lingua-lustra-brhnet45-03-lingua-lustra-slow-time__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "beat-doctor-tou269b__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "beat-doctor-tou269b__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "chunga-tribe-02-special-agents__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "chunga-tribe-02-special-agents__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "electroteque-2000-07-10-electroteque-central-station-sydney-__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "electroteque-2000-07-10-electroteque-central-station-sydney-__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "joanne-gabriel-01-the-planet__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "joanne-gabriel-01-the-planet__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "fm-dig019-04-fm-agrim-string-of-death-and-a-bitter-poison__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "fm-dig019-04-fm-agrim-string-of-death-and-a-bitter-poison__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "blunderwood-01-geo-sync-deluxe__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     7,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "blunderwood-01-geo-sync-deluxe__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "ivan-der-dreckige-02-ivan-der-dreckige-death-in-the-cucumber__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "ivan-der-dreckige-02-ivan-der-dreckige-death-in-the-cucumber__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "the-lee-of-the-stone-01-an-unexpected-detour-through-the-all__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-19-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     7,
+     0.875
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "the-lee-of-the-stone-01-an-unexpected-detour-through-the-all__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-13-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "deadman-digi-hartatak-sphereoffear-edit5__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "deadman-digi-hartatak-sphereoffear-edit5__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "knowsur-01knowsur-suneru__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "knowsur-01knowsur-suneru__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-goblin-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-yet-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     6,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "winterstrand-01-winterstrand-process-reedit__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "winterstrand-01-winterstrand-process-reedit__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "theroyaloui-01afterthefire__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "theroyaloui-01afterthefire__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-yet-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "pro-audio-01-pro-audio-born-in-a-pod__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "pro-audio-01-pro-audio-born-in-a-pod__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "shoki-recordings-02-shoki009-bardo-boiler__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-14-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|other",
+     7,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|other",
+     7,
+     1.0
+    ]
+   ],
+   "B_sources": []
+  },
+  {
+   "id": "shoki-recordings-02-shoki009-bardo-boiler__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-14-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|other",
+     9,
+     0.9
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|other",
+     9,
+     0.9
+    ]
+   ],
+   "B_sources": []
+  },
+  {
+   "id": "genetic-trance-01abracadabra__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "genetic-trance-01abracadabra__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "litmus0001-anu014-litmus0001-001-pripyat__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "litmus0001-anu014-litmus0001-001-pripyat__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "duran-vazquez-2-second-miniature__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "duran-vazquez-2-second-miniature__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "shaggy-haggard-03-anthem__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "shaggy-haggard-03-anthem__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "second-thought-christmaspart1__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-trance-13-stems",
+     8,
+     1.0
+    ]
+   ],
+   "B": false,
+   "B_false": [
+    [
+     "stems-twilight-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-trance-19-stems|vocals",
+     6,
+     0.857
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-19-stems|vocals",
+     6,
+     0.857
+    ]
+   ],
+   "B_sources": []
+  },
+  {
+   "id": "second-thought-christmaspart1__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "1-demo__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-14-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-trance-13-stems|bass",
+     6,
+     0.75
+    ],
+    [
+     "stems-yet-stems|drums",
+     6,
+     0.857
+    ]
+   ],
+   "C": false,
+   "C_false": [
+    [
+     "stems-trance-13-stems|bass",
+     6,
+     0.75
+    ]
+   ],
+   "B_sources": []
+  },
+  {
+   "id": "1-demo__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-14-stems|drums",
+     8,
+     0.889
+    ],
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     7,
+     0.875
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "digi-hartatak-and-freejustin-foundation-freejustinfinal-vbr__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-when-fish-attack-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-death-crash-kills-49-ft-freqman-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "digi-hartatak-and-freejustin-foundation-freejustinfinal-vbr__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-death-crash-kills-49-ft-freqman-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     6,
+     0.75
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "xenophobe-noisecollectorxenophobevol13__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "xenophobe-noisecollectorxenophobevol13__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "sean-derrick-cooper-marquardt-sean-derrick-cooper-marquardt-__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "sean-derrick-cooper-marquardt-sean-derrick-cooper-marquardt-__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "zandoz-corp-04-zandoz-corp-sweet-black-heart__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     7,
+     1.0
+    ],
+    [
+     "stems-the-headless-dead-are-back-in-town-stems|drums",
+     6,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "zandoz-corp-04-zandoz-corp-sweet-black-heart__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [
+    [
+     "stems-goblin-stems",
+     7,
+     0.875
+    ],
+    [
+     "stems-fdt-y-stems",
+     7,
+     1.0
+    ]
+   ],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-y-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-neighborhood-girl-saw-mix-stems-ft-steven-m-bryant|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-busfahrt-stems|drums",
+     9,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "concordant-opposition-productions-001warehousejam__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "concordant-opposition-productions-001warehousejam__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-an-open-medicine-cabinet-is-an-open-bar|drums",
+     7,
+     1.0
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "risey-tou255b__0__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-trance-19-stems|drums",
+     6,
+     0.75
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  },
+  {
+   "id": "risey-tou255b__1__bg",
+   "kind": "unrelated",
+   "level": "alone",
+   "A": false,
+   "A_false": [],
+   "B": false,
+   "B_false": [
+    [
+     "stems-fdt-alpha-omega-stems|drums",
+     10,
+     1.0
+    ],
+    [
+     "stems-twilight-stems|drums",
+     9,
+     0.9
+    ],
+    [
+     "stems-trance-13-stems|drums",
+     9,
+     0.9
+    ],
+    [
+     "stems-fdt-y-stems|drums",
+     9,
+     0.9
+    ],
+    [
+     "stems-trance-19-stems|drums",
+     8,
+     0.8
+    ],
+    [
+     "stems-when-fish-attack-stems|drums",
+     8,
+     1.0
+    ],
+    [
+     "stems-death-crash-kills-49-ft-freqman-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-yet-stems|drums",
+     7,
+     0.778
+    ],
+    [
+     "stems-day-of-the-headless-dead-stems|drums",
+     7,
+     0.778
+    ]
+   ],
+   "C": false,
+   "C_false": [],
+   "B_sources": []
+  }
+ ],
+ "codes_per_minute": {
+  "A": 23.39,
+  "B": 76.67
+ },
+ "match_ms": {
+  "A": 10.4,
+  "B": 135.8
+ },
+ "separation_s_per_minute": 22.98,
+ "separation_threads": 10
+}

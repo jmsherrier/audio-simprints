@@ -2,6 +2,24 @@
 
 ## Unreleased
 
+### Stems test (Phase 4, optional)
+
+- `audio-simprints stems`, which needs `pip install ".[stems]"`, adds demucs 4.1.0
+  and torch 2.5.1. Torch 2.15.0 would not load under Windows Smart App Control.
+  The htdemucs weights download to the Hugging Face cache, never to the
+  repository, and their licence is not clear (THIRD-PARTY-NOTICES.md).
+- A stems split of 20 archive.org songs (CC BY 3.0) with full mix and real drums,
+  bass and keys stems (`build_manifest.py --add-stems 20`).
+- Report: `tests/corpus/report-stems/`. It has three runs:
+  - A: a stem against full mixes.
+  - B: demucs on both sides.
+  - C: B without the drums index.
+- Results:
+  - A finds almost nothing.
+  - B finds 28% of stems mixed at 0 dB, but 38% of its stem queries also hit
+    another song, nearly all on drums.
+  - C keeps B's bass and keys rates with 6.7% false matches.
+
 ### Recipe 0.2 (Phase 3)
 
 - Settings fitted on the tuning split (`audio-simprints tune`): windows of 5 s

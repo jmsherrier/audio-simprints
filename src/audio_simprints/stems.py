@@ -197,7 +197,8 @@ def run(split_out: Path):
             ms["B"].append(1000 * (time.perf_counter() - t))
         fa, xa = found(q, hits_a)
         fb, xb = found(q, hits_b) if hits_b is not None else (None, [])
-        rows.append({"id": q["id"], "kind": q["kind"], "level": q["level"], "A": fa, "A_false": xa, "B": fb, "B_false": xb,
+        fc, xc = found(q, [h for h in hits_b if not h["declaration"].endswith("|drums")]) if hits_b is not None else (None, [])
+        rows.append({"id": q["id"], "kind": q["kind"], "level": q["level"], "A": fa, "A_false": xa, "B": fb, "B_false": xb, "C": fc, "C_false": xc,
                      "B_sources": sorted({h["declaration"].split("|")[1] for h in hits_b or [] if h["declaration"].split("|")[0] == q["song"]})})  # fmt: skip
     r = {"recipe": recipe.RECIPE, "model": MODEL, "match": recipe.MATCH, "songs": len(songs),
          "song_minutes": round(sum(x["duration"] for x in songs.values()) / 60, 1), "queries": rows,
@@ -211,9 +212,14 @@ def run(split_out: Path):
     print(summary(r))
 
 
-def pb(g) -> str:
-    g = [x for x in g if x["B"] is not None]
-    return pct(sum(x["B"] for x in g), len(g)) if g else "not run"
+def pb(g, k="B") -> str:
+    g = [x for x in g if x[k] is not None]
+    return pct(sum(x[k] for x in g), len(g)) if g else "not run"
+
+
+def pf(g, k) -> str:
+    g = [x for x in g if x[k] is not None]
+    return pct(sum(bool(x[k + "_false"]) for x in g), len(g))
 
 
 def summary(r) -> str:
@@ -225,20 +231,23 @@ def summary(r) -> str:
          f"loudness, or 6 dB under it). Found: the right song, offset within {OFFSET_OK:g} s.", "",
          f"**A**: the query against the songs' full mixes. **B**: demucs ({r['model']}) on both sides: each full mix separated into "
          "drums, bass, other and vocals, each indexed; the query separated too, and each of its four parts matched. B is run on "
-         "the mixed queries only.", "",
-         "| stem | level | A: found | B: found |", "| --- | --- | --- | --- |"]  # fmt: skip
+         "the mixed queries only. **C**: B with the songs' demucs drums stems left out of the index, a variant, not "
+         "fitted.", "",
+         "| stem | level | A: found | B: found | C: found |", "| --- | --- | --- | --- | --- |"]  # fmt: skip
     for k in KINDS:
         for lv in LEVELS:
             g = [x for x in q if x["kind"] == k and x["level"] == lv]
-            L.append(f"| {k} | {lv} | {pct(sum(x['A'] for x in g), len(g))} | {pb(g)} |")
+            L.append(f"| {k} | {lv} | {pct(sum(x['A'] for x in g), len(g))} | {pb(g)} | {pb(g, 'C')} |")
     for lv in LEVELS:
         g = [x for x in q if x["kind"] in KINDS and x["level"] == lv]
-        L.append(f"| all | {lv} | {pct(sum(x['A'] for x in g), len(g))} | {pb(g)} |")
+        L.append(f"| all | {lv} | {pct(sum(x['A'] for x in g), len(g))} | {pb(g)} | {pb(g, 'C')} |")
     st = [x for x in q if x["kind"] in KINDS]
     bg = [x for x in q if x["kind"] == "unrelated"]
-    L += ["", "**False matches** (a hit on another song):", "", "| queries | A | B |", "| --- | --- | --- |",
-          f"| stem queries | {pct(sum(bool(x['A_false']) for x in st), len(st))} | {pct(sum(bool(x['B_false']) for x in st if x['B'] is not None), sum(x['B'] is not None for x in st))} |",
-          f"| unrelated tracks alone | {pct(sum(bool(x['A_false']) for x in bg), len(bg))} | {pct(sum(bool(x['B_false']) for x in bg), len(bg))} |", ""]  # fmt: skip
+    fb = [h[0].split("|")[1] for x in q for h in x["B_false"]]
+    L += ["", "**False matches** (a hit on another song):", "", "| queries | A | B | C |", "| --- | --- | --- | --- |",
+          f"| stem queries | {pf(st, 'A')} | {pf(st, 'B')} | {pf(st, 'C')} |",
+          f"| unrelated tracks alone | {pf(bg, 'A')} | {pf(bg, 'B')} | {pf(bg, 'C')} |", "",
+          f"B's false hits by demucs stem: " + ", ".join(f"{k} {fb.count(k)}" for k in ("drums", "bass", "other", "vocals")) + ".", ""]  # fmt: skip
     srcs = {}
     for x in st:
         if x["B"]:

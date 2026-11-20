@@ -203,6 +203,52 @@ included. Matching against the 30 originals takes a median 30.9 ms per query at
 step 0.124 s, 6.9 ms at 0.5 s and 122.1 ms with 4 speed passes (each pass is also
 another fpcalc run).
 
+## Stems (Phase 4, optional)
+
+Can a single stem, such as a song's bass line mixed into another track, be traced
+back to the song? Twenty songs from archive.org (CC BY 3.0, 105.3 min) come with
+their full mix and real drums, bass and keys stems. A query is 30 s of one stem,
+either alone or mixed over an unrelated netlabel track. The stem is set at the
+track's loudness (0 dB) or 6 dB below it. Each case has 40 queries.
+**A** matches the query against the full mixes. **B** runs demucs (htdemucs) on
+both sides: each full mix and each query is split into drums, bass, other and
+vocals, and every part is matched against every part. **C** is B without the
+songs' drums stems in the index. It is a variant, not a fitted setting.
+Numbers: [`tests/corpus/report-stems/summary.md`](tests/corpus/report-stems/summary.md).
+
+| stem | level | A: found | B: found | C: found |
+| --- | --- | --- | --- | --- |
+| drums | alone | 12% (5/40) | not run | not run |
+| drums | mix 0 dB | 2.5% (1/40) | 28% (11/40) | 0% (0/40) |
+| drums | mix −6 dB | 0% (0/40) | 12% (5/40) | 0% (0/40) |
+| bass | alone | 5.0% (2/40) | not run | not run |
+| bass | mix 0 dB | 0% (0/40) | 40% (16/40) | 40% (16/40) |
+| bass | mix −6 dB | 0% (0/40) | 25% (10/40) | 25% (10/40) |
+| keys | alone | 0% (0/40) | not run | not run |
+| keys | mix 0 dB | 0% (0/40) | 18% (7/40) | 18% (7/40) |
+| keys | mix −6 dB | 0% (0/40) | 10% (4/40) | 10% (4/40) |
+
+| false matches (a hit on another song) | A | B | C |
+| --- | --- | --- | --- |
+| stem queries | 5.3% (19/360) | 38% (90/240) | 6.7% (16/240) |
+| unrelated tracks alone | 3.3% (2/60) | 33% (20/60) | 6.7% (4/60) |
+
+In short:
+- A stem does not match its own full mix. That holds even when the stem is played
+  alone (12% for drums, 0–5% for the others).
+- Separating both sides helps. B finds 28% of stems mixed at 0 dB and 16% at −6 dB.
+- B's drum stems make it unusable as it stands. B's false hits by demucs stem:
+  drums 487, bass 5, other 5, vocals 10. Unrelated tracks hit the drums as well, so electronic
+  drums look alike across songs, not only within this producer's work.
+- C drops the drums index. False matches fall to 6.7%, and bass and keys are found
+  as often as in B. Drums are then never found.
+
+**Cost.** Four stems store 76.67 codes per minute of song, against 23.39 for the
+mix. Matching takes a median 135.8 ms per query for B's four parts,
+against 10.4 ms for A. Demucs separated 22.98 s per minute of audio in one process
+of 10 CPU threads. That figure covers the second part of the run, which was mostly
+30 s clips.
+
 ## Test mode
 
 ```sh
@@ -237,6 +283,13 @@ was throttling.
 - Storage is twice that of 0.1, because windows are half as long.
 - The test corpus is missing its orchestral and chamber music, and has only 30
   originals.
+- Stems (Phase 4) are a research test, not a feature:
+  - All 20 stem songs come from one producer, mostly electronic pop, so variety
+    is low.
+  - The demucs weights have no clear licence (see
+    [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)).
+  - Separation is far slower than fingerprinting.
+  - Vocal stems were not queried; only drums, bass and keys were.
 
 ## Patents: not reviewed
 
